@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/camera"
+        android:layout_width="325dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/blurLayout"
+        android:layout_below="@id/camera"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/blurText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+        <com.google.android.material.slider.Slider
+            android:contentDescription = "Blur Slider"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sliderBlur"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:value="1"/>
+
+        <TextView
+            android:id="@+id/blurVal"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/edgeLayout"
+        android:layout_below="@id/blurLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/edgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <com.google.android.material.slider.Slider
+            android:contentDescription = "Edge Slider"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sliderEdge"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:value="1"/>
+
+        <TextView
+            android:id="@+id/edgeVal"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/angleLayout"
+        android:layout_below="@id/edgeLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/angleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+        <com.google.android.material.slider.Slider
+            android:contentDescription = "Angle Slider"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sliderAngle"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:value="1"/>
+
+        <TextView
+            android:id="@+id/angleVal"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startButton"
+        android:text="Aplicar Filtro"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/angleLayout"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
