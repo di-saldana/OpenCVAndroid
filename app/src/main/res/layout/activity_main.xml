@@ -35,15 +35,16 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/sliderBlur"
-            android:valueFrom="0"
-            android:valueTo="100"
-            android:value="1"/>
+            android:valueFrom="1"
+            android:valueTo="5"
+            android:value="5"
+            android:stepSize="2"/>
 
         <TextView
             android:id="@+id/blurVal"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="5"
             android:layout_gravity="center"
             android:textAlignment="center"/>
     </LinearLayout>
@@ -71,13 +72,14 @@
             android:id="@+id/sliderEdge"
             android:valueFrom="0"
             android:valueTo="100"
-            android:value="1"/>
+            android:value="50"
+            android:stepSize="1"/>
 
         <TextView
             android:id="@+id/edgeVal"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="50"
             android:layout_gravity="center"
             android:textAlignment="center"/>
     </LinearLayout>
@@ -103,15 +105,16 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/sliderAngle"
-            android:valueFrom="0"
-            android:valueTo="100"
-            android:value="1"/>
+            android:valueFrom="1"
+            android:valueTo="5"
+            android:value="5"
+            android:stepSize="1"/>
 
         <TextView
             android:id="@+id/angleVal"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="5"
             android:layout_gravity="center"
             android:textAlignment="center"/>
     </LinearLayout>
@@ -119,7 +122,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/startButton"
+        android:id="@+id/button"
         android:text="Aplicar Filtro"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/angleLayout"
